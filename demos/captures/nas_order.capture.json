@@ -1,0 +1,102 @@
+{
+ "note": "simulated capture",
+ "events": [
+  {
+   "t": 0.012,
+   "proto": "S1AP",
+   "msg": "InitialUEMessage",
+   "nas_type": "0x41",
+   "imsi": "001010123456001"
+  },
+  {
+   "t": 0.024,
+   "proto": "S1AP",
+   "msg": "DownlinkNASTransport",
+   "nas_type": "0x52",
+   "imsi": "001010123456001"
+  },
+  {
+   "t": 0.036,
+   "proto": "S1AP",
+   "msg": "UplinkNASTransport",
+   "nas_type": "0x53",
+   "imsi": "001010123456001"
+  },
+  {
+   "t": 0.048,
+   "proto": "S1AP",
+   "msg": "DownlinkNASTransport",
+   "nas_type": "0x5d",
+   "imsi": "001010123456001"
+  },
+  {
+   "t": 0.06,
+   "proto": "S1AP",
+   "msg": "UplinkNASTransport",
+   "nas_type": "0x5e",
+   "imsi": "001010123456001"
+  },
+  {
+   "t": 0.072,
+   "proto": "S1AP",
+   "msg": "InitialContextSetupRequest",
+   "nas_type": "0x42",
+   "imsi": "001010123456001",
+   "erab_id": 5,
+   "eps_bearer_id": 5,
+   "teid": 4097
+  },
+  {
+   "t": 0.084,
+   "proto": "S1AP",
+   "msg": "InitialContextSetupResponse",
+   "nas_type": "",
+   "imsi": "001010123456001",
+   "erab_id": 5,
+   "teid": 8193
+  },
+  {
+   "t": 0.096,
+   "proto": "S1AP",
+   "msg": "UplinkNASTransport",
+   "nas_type": "0x43",
+   "imsi": "001010123456001"
+  },
+  {
+   "t": 0.108,
+   "proto": "GTP-U",
+   "msg": "ICMP echo request",
+   "nas_type": "",
+   "imsi": "001010123456001",
+   "direction": "UL",
+   "teid": 4097
+  },
+  {
+   "t": 0.12,
+   "proto": "GTP-U",
+   "msg": "ICMP echo reply",
+   "nas_type": "",
+   "imsi": "001010123456001",
+   "direction": "DL",
+   "teid": 8193
+  },
+  {
+   "t": 0.132,
+   "proto": "GTP-U",
+   "msg": "ICMP echo request",
+   "nas_type": "",
+   "imsi": "001010123456001",
+   "direction": "UL",
+   "teid": 4097
+  },
+  {
+   "t": 0.144,
+   "proto": "GTP-U",
+   "msg": "ICMP echo reply",
+   "nas_type": "",
+   "imsi": "001010123456001",
+   "direction": "DL",
+   "teid": 8193
+  }
+ ]
+}

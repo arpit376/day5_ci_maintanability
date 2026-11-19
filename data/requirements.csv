@@ -1,0 +1,25 @@
+id,description
+REQ-ATTACH-01,UE with a valid subscriber attaches and gets an IP
+REQ-ATTACH-02,Detach leaves no bearer behind
+REQ-ATTACH-03,Attach setup time is reported
+REQ-AUTH-01,Wrong key is rejected with the authentication failure cause
+REQ-AUTH-02,Unknown IMSI is rejected with EMM cause 8
+REQ-AUTH-03,Network recovers after a rejected attach
+REQ-BEARER-01,Default bearer is active with an IP
+REQ-IDLE-01,Service request restores the bearer after idle
+REQ-TAU-01,Tracking area update is accepted
+REQ-CAP-01,Ten UEs attach concurrently with unique IPs
+REQ-PROTO-01,NAS messages appear in the specified order
+REQ-PROTO-02,Security mode completes before Attach Accept
+REQ-PROTO-03,E-RAB ID matches the EPS bearer ID
+REQ-PROTO-04,TEIDs are consistent and a ping is visible in GTP-U
+REQ-PROTO-05,A rejected attach creates no bearer setup
+REQ-KPI-01,Attach success rate and setup time meet thresholds
+REQ-KPI-02,Downlink throughput meets the threshold
+REQ-KPI-03,Latency meets the threshold
+REQ-KPI-04,Throughput holds across bandwidth and UE count
+REQ-HO-01,X2 handover keeps the session
+REQ-DETACH-02,Network-initiated detach is handled
+REQ-ATTACH-04,Five UEs attach on a noisy cell (quarantined: intermittent)
+REQ-PAR-01,Attach works when tests run in parallel with separate subscribers
+REQ-STAB-01,300 attach/detach cycles without failure or bearer leak

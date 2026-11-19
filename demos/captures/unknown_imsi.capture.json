@@ -1,0 +1,20 @@
+{
+ "note": "simulated capture",
+ "events": [
+  {
+   "t": 0.012,
+   "proto": "S1AP",
+   "msg": "InitialUEMessage",
+   "nas_type": "0x41",
+   "imsi": "001010999999999"
+  },
+  {
+   "t": 0.024,
+   "proto": "S1AP",
+   "msg": "DownlinkNASTransport",
+   "nas_type": "0x44",
+   "imsi": "001010999999999",
+   "emm_cause": 8
+  }
+ ]
+}

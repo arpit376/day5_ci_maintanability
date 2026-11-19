@@ -1,0 +1,4 @@
+robotframework>=6.0
+robotframework-pabot>=2.16
+robotframework-requests>=0.9.6
+robotframework-sshlibrary>=3.8

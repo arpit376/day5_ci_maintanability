@@ -1,0 +1,18 @@
+# PabotLib value sets: one set per worker (module 5.2).
+# Each worker takes a set with "Acquire Value Set" and gives it back with "Release Value Set".
+# Keep at least as many sets as --processes.
+[worker1]
+imsi=001010123456101
+namespace=ue1_ns
+
+[worker2]
+imsi=001010123456102
+namespace=ue2_ns
+
+[worker3]
+imsi=001010123456103
+namespace=ue3_ns
+
+[worker4]
+imsi=001010123456104
+namespace=ue4_ns

@@ -1,0 +1,3 @@
+# Robot argument file: use with   robot -A lab.args ...
+# Makes the libraries folder importable (LteLib, day2_lte).
+--pythonpath libraries
