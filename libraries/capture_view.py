@@ -137,14 +137,24 @@ def _walk(obj, key=None):
 def packets_from_pcap(path):
     if subprocess.run(["which", "tshark"], capture_output=True).returncode != 0:
         raise SystemExit("tshark is not installed:  sudo apt install tshark")
+    if not os.path.isfile(path):
+        raise SystemExit(f"Capture file not found: {path}\nTake one first, for example:\n"
+                         f"  sudo tshark -i lo -f sctp -a duration:90 -w {path} &\n"
+                         f"  bash /opt/oai-4g/run_multi_ue.sh 1 ; wait ; sudo chmod 644 {path}")
     cols = ["frame.number", "frame.time_relative", "_ws.col.Source", "_ws.col.Destination",
             "_ws.col.Protocol", "frame.len", "_ws.col.Info", "nas_eps.nas_msg_emm_type", "e212.imsi",
             "nas_eps.emm.cause"]
     args = ["tshark", "-r", path, "-T", "fields", "-E", "separator=\t"]
     for c in cols:
         args += ["-e", c]
-    rows = subprocess.check_output(args, text=True).splitlines()
-    details = json.loads(subprocess.check_output(["tshark", "-r", path, "-T", "json", "-x"], text=True))
+    try:
+        rows = subprocess.check_output(args, text=True, stderr=subprocess.PIPE).splitlines()
+        details = json.loads(subprocess.check_output(["tshark", "-r", path, "-T", "json", "-x"],
+                                                     text=True, stderr=subprocess.PIPE))
+    except subprocess.CalledProcessError as exc:
+        raise SystemExit(f"tshark could not read {path}: {(exc.stderr or '').strip()[:300]}")
+    if not rows:
+        raise SystemExit(f"{path} holds no packets. Start the capture BEFORE the attach.")
     out = []
     for i, line in enumerate(rows):
         f = (line.split("\t") + [""] * len(cols))[:len(cols)]

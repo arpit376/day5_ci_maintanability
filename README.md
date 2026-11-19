@@ -11,8 +11,7 @@ Open5GS, no eNodeB and no root are needed. On the real VM only the interface lay
 ## 1. Set up (2 minutes)
 
 ```bash
-git clone https://github.com/arpit376/day5_ci_maintanability.git
-cd day5_ci_maintanability/
+unzip day5_ci_maintainability.zip && cd day5_ci_maintainability
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ./run.sh check          # must end with READY
